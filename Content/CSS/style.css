@@ -1,6 +1,12 @@
 body {
-  text-align: center; 
+  text-align: center;
 }
  h1 {
    font-family: impact;
+ }
+
+ .sentence {
+   width: 50%;
+   margin: auto;
+   margin-top: 50px;
  }

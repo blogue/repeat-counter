@@ -3,16 +3,23 @@
   <head>
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="/Content/CSS/style.css" rel="stylesheet" type="text/css">
     <title>Search</title>
   </head>
   <body>
-    <h3>Sentence: </h3>
-    <h4>@Model.GetStrings()[0]</h4>
+
+    <div class="sentence well">
+      <h3>Sentence: </h3>
+      <h4>@Model.GetStrings()[0]</h4>
+    </div>
+
 
     @if(@Model.GetStrings()[0].Contains(@Model.GetStrings()[1]))
     {
-     <h3>Matches and partial matches: </h3>
-     <h4>@Model.Highlight(@Model.GetStrings()[0], @Model.GetStrings()[1])</h4>;
+      <div class="sentence well">
+        <h3>Matches and partial matches: </h3>
+        <h4>@Model.Highlight(@Model.GetStrings()[0], @Model.GetStrings()[1])</h4>;
+      </div>
     }
     <h3>Your sentence has @Model.GetCount() matching result(s) for '@Model.GetStrings()[1]'.</h3>
     <a href="/"><button class="btn btn-danger" type="button" name="button">Search Again</button></a>

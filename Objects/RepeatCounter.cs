@@ -28,7 +28,7 @@ namespace WordRepeatCounter
     public StringBuilder Highlight(string sentenceToHighlight, string wordToHighlight)
     {
       StringBuilder highlight = new StringBuilder(sentenceToHighlight);
-      highlight.Replace(wordToHighlight, "*" + wordToHighlight + "*");
+      highlight.Replace(wordToHighlight, "<<<-" + wordToHighlight + "->>>");
 
       return highlight;
     }

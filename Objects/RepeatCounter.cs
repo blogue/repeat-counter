@@ -1,5 +1,6 @@
-using System;
+using System.Text;
 using System.Collections.Generic;
+using System;
 
 
 namespace WordRepeatCounter
@@ -13,9 +14,8 @@ namespace WordRepeatCounter
       _userStrings[0] = userString;
       _userStrings[1] = userWord;
 
-      char[] delimCharacters = {' ', ',', '.', '!', '?', ':', ';'};
+      char[] delimCharacters = {' ', ',', '.', '!', '?', ':', ';' , '"', '-', '(', ')'};
       string[] userStringArray = userString.Split(delimCharacters);
-
       for(int i=0; i<userStringArray.Length; i++)
       {
         if(userStringArray[i].ToLower() == userWord.ToLower())
@@ -24,6 +24,13 @@ namespace WordRepeatCounter
         }
       }
       return _repeatCounter;
+    }
+    public StringBuilder Highlight(string sentenceToHighlight, string wordToHighlight)
+    {
+      StringBuilder highlight = new StringBuilder(sentenceToHighlight);
+      highlight.Replace(wordToHighlight, "*" + wordToHighlight + "*");
+
+      return highlight;
     }
     public List<string> GetStrings()
     {

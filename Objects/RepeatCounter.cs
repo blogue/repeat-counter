@@ -6,10 +6,12 @@ namespace WordRepeatCounter
 {
   public class RepeatCounter
   {
-    private static List<string> _userStrings = new List<string>{};
+    private static List<string> _userStrings = new List<string>{"empty", "empty"};
 
     public int CountRepeats(string userString, string userWord)
     {
+      _userStrings[0] = userString;
+      _userStrings[1] = userWord;
       int repeatCounter = 0;
       char[] delimCharacters = {' ', ',', '.', '!', '?', ':', ';'};
       string[] userStringArray = userString.Split(delimCharacters);

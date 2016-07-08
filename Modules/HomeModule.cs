@@ -12,9 +12,9 @@ namespace WordRepeatCounter
         return View["index.cshtml"];
       };
       Post["/result"] = _ => {
-        RepeatCounter c = new RepeatCounter();
-        int userResult = c.CountRepeats(Request.Form["user-sentence"], Request.Form["user-word"]);
-        return View["result.cshtml", userResult];
+        RepeatCounter newCountResult = new RepeatCounter();
+        newCountResult.CountRepeats(Request.Form["user-sentence"], Request.Form["user-word"]);
+        return View["result.cshtml", newCountResult];
       };
     }
   }

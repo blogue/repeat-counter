@@ -1,6 +1,6 @@
-#### Repeat Counter. Current as of June 9, 2016
+# Repeat Counter, Current as of June 9, 2016
 
-#### By and Ben Logue
+#### By Ben Logue
 
 ## Description
 
@@ -41,4 +41,4 @@ benjamin.logue73@gmail.com
 
 Licensed under the MIT License
 
-Copyright (c) 2016 **Epicodus Ben Logue**
+Copyright (c) 2016 **Ben Logue**

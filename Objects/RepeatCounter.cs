@@ -16,7 +16,7 @@ namespace WordRepeatCounter
 
       for(int i=0; i<userStringArray.Length; i++)
       {
-        if(userStringArray[i].ToLower().Contains(userWord.ToLower()))
+        if(userStringArray[i].ToLower() == userWord.ToLower())
         {
           repeatCounter++;
         }

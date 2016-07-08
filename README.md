@@ -1,6 +1,6 @@
-# Repeat Counter, Current as of June 9, 2016
+# Repeat Counter
 
-#### By Ben Logue
+#### By Ben Logue, Current as of June 9, 2016
 
 ## Description
 
